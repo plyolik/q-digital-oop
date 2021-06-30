@@ -1,4 +1,4 @@
-class Mig  {
+class Plane {
     constructor (name, maxSpeed) {
         this.name = name
         this.maxSpeed = maxSpeed
@@ -11,6 +11,13 @@ class Mig  {
 
     landing = () => {
         this.status = false
+    }
+}
+
+
+class Mig extends Plane {
+    constructor(maxSpeed) {
+        super('Mig', maxSpeed)
     }
 
     attack = () => {
@@ -19,19 +26,8 @@ class Mig  {
 
 }
 
-class Ty154 {
-    constructor (name, maxSpeed) {
-        this.name = name
-        this.maxSpeed = maxSpeed
-        this.satus = false
+class Ty154 extends Plane {
+    constructor(maxSpeed) {
+        super('TY-154', maxSpeed)
     }
-
-    takeoff = () => {
-        this.status = true
-    }
-
-    landing = () => {
-        this.status = false
-    }
-    
 }
